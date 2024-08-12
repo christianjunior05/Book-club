@@ -1,9 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AuthorController;
 
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/authors/create', [AuthorController::class, 'create'])->name('authors.create');
-Route::post('/authors', [AuthorController::class, 'store'])->name('authors.store');
+Route::get('/author/create', [AuthorController::class, 'create'])->name('author.create');
+Route::post('/author', [AuthorController::class, 'store'])->name('author.store');
