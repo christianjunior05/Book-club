@@ -13,9 +13,10 @@ return new class extends Migration
     {
         Schema::create('books', function (Blueprint $table) {
             $table->id();
-            $table ->string("nom");
-            $table->strng('description');
+            $table->string("nom");
+            $table->string("description");
             $table->unsignedInteger('prix');
+            $table->foreignId('author_id')->constrained('authors')->onDelete('cascade'); // Clé étrangère
             $table->timestamps();
         });
     }
