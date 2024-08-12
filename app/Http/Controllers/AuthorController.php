@@ -30,9 +30,10 @@ class AuthorController extends Controller
         ]);
 
         // Création de l'auteur
-        Author::create([
-            'name' => $request->input('name'),
+        $author = Author::create([
+            'name_author' => $request->input('name_author'),
         ]);
+
     }
 
     /**
