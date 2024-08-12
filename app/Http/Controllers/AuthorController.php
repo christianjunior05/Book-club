@@ -28,7 +28,14 @@ class AuthorController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'name' => 'required|string|max:255',
+        ]);
+
+        // Création de l'auteur
+        Author::create([
+            'name' => $request->input('name'),
+        ]);
     }
 
     /**
