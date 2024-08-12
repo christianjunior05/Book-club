@@ -7,6 +7,20 @@
     <title>Document</title>
 </head>
 <body>
+    <form action="">
+        <h1>Ajourter un livre </h1>
 
-</body>
+        <div>
+            <p>Nom du livre </p>
+            <input type="text">
+        </div>
+        <div>
+            <p>Description du livre </p>
+            <input type="text">
+        </div>
+        <div>
+            <p>Prix du livre </p>
+            <input type="number" name="" id="">
+        </div>
+    </form>
 </html>
