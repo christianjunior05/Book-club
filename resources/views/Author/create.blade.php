@@ -9,6 +9,7 @@
 
 
     <form action="{{ route('author.store') }}" method="POST">
+        @csrf
         <label for="name">Nom de l'Auteur :</label>
         <input type="text" id="name" name="name" required>
         <button type="submit">Ajouter</button>
