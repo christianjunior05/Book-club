@@ -11,18 +11,18 @@
 </body>
 </html>
 <h1>Bienvenu sur le book club </h1>
-<a href=" {{route('author.create')}}">
+<a href=" {{route('api/author.create')}}">
 
     <h1 class="bg-red-500">Ajouter un auteur </h1>
 </a>
 
 
-<a href=" {{route('author.index')}}">
+<a href=" {{route('api/author.index')}}">
 
     <h1 class="bg-red-500">Liste des auteurs </h1>
 </a>
 
-<a href=" {{route('author.destroy')}}">
+<a href=" {{route('api/author.destroy')}}">
 
     <h1 class="bg-red-500">Supprimez un auteur  auteurs </h1>
 </a>
