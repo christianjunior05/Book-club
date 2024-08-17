@@ -8,7 +8,7 @@
 </head>
 <body><div class="container">
     <h1>Liste des Auteurs</h1>
-    @foreach($authors as $author)
+    @foreach($author as $author)
         <div class="card my-3">
             <div class="card-header">
                 {{ $author->name_author }}
