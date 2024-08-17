@@ -82,6 +82,16 @@ class AuthorController extends Controller
      */
     public function destroy(Author $author)
     {
-        //
+        // Trouver l'auteur
+        $author = Author::findOrFail($id);
+
+        // Supprimer les livres associés à l'auteur
+        $author->books()->delete();
+
+        // Supprimer l'auteur
+        $author->delete();
+
+        // Rediriger vers la page d'accueil avec un message de succès
+        return redirect()->route('home')->with('success', 'Auteur et ses livres associés supprimés avec succès!');
     }
 }

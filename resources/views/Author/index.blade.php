@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,8 +14,8 @@
                 {{ $author->name_author }}
             </div>
             <div class="card-header">
-               
-                <a href="{{ route('author.edit', $author->id) }}" class="btn btn-primary btn-sm float-right">Modifier</a>
+
+                <a href="{{ route('author.edit', $author->id) }}" class="btn ">Modifier le nom de l'auteur </a>
             </div>
             <div class="card-body">
                 <h5>Livres :</h5>
