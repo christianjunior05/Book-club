@@ -60,9 +60,21 @@ class AuthorController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Author $author)
+    public function update(Request $request, $id)
     {
-        //
+        // Valider les données du formulaire
+        $request->validate([
+            'name_author' => 'required|string|max:255',
+        ]);
+
+        // Trouver l'auteur et mettre à jour les informations
+        $author = Author::findOrFail($id);
+        $author->update([
+            'name_author' => $request->name_author,
+        ]);
+
+        // Rediriger vers la page d'accueil avec un message de succès
+        return redirect()->route('home')->with('success', 'Auteur mis à jour avec succès!');
     }
 
     /**
