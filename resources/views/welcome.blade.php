@@ -22,3 +22,9 @@
     <h1 class="bg-red-500">Liste des auteurs </h1>
 </a>
 
+<a href=" {{route('author.destroy')}}">
+
+    <h1 class="bg-red-500">Supprimez un auteur  auteurs </h1>
+</a>
+
+
