@@ -11,3 +11,4 @@ Route::get('/author/index', [AuthorController::class, 'index'])->name('author.in
 Route::post('/author', [AuthorController::class, 'store'])->name('author.store');
 Route::get('/authors/{id}/edit', [AuthorController::class, 'edit'])->name('author.edit');
 Route::put('/authors/{id}', [AuthorController::class, 'update'])->name('author.update');
+Route::get('/author/destroy', [AuthorController::class, 'destroy'])->name('author.destroy');
