@@ -13,6 +13,10 @@
             <div class="card-header">
                 {{ $author->name_author }}
             </div>
+            <div class="card-header">
+                {{ $author->name_author }}
+                <a href="{{ route('author.edit', $author->id) }}" class="btn btn-primary btn-sm float-right">Modifier</a>
+            </div>
             <div class="card-body">
                 <h5>Livres :</h5>
                 <ul>
