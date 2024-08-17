@@ -12,7 +12,8 @@ class AuthorController extends Controller
      */
     public function index()
     {
-        //
+        $authors = Author::with('books')->get();
+        return view('authors.index', compact('authors'));
     }
 
     /**
@@ -25,8 +26,9 @@ class AuthorController extends Controller
 
     public function store(Request $request)
     {
+
         $request->validate([
-            'name' => 'required|string|max:255',
+            'name_author' => 'required|string|max:255',
         ]);
 
         // Création de l'auteur
@@ -41,7 +43,7 @@ class AuthorController extends Controller
      */
     public function show(Author $author)
     {
-        //
+
     }
 
     /**
