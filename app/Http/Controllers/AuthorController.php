@@ -49,10 +49,13 @@ class AuthorController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Author $author)
-    {
-        //
-    }
+
+        public function edit($id)
+        {
+            $author = Author::findOrFail($id);
+            return view('authors.edit', compact('author'));
+        }
+    
 
     /**
      * Update the specified resource in storage.
