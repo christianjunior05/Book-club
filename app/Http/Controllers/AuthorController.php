@@ -53,9 +53,9 @@ class AuthorController extends Controller
         public function edit($id)
         {
             $author = Author::findOrFail($id);
-            return view('authors.edit', compact('author'));
+            return view('author.edit', compact('author'));
         }
-    
+
 
     /**
      * Update the specified resource in storage.
