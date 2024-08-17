@@ -35,7 +35,7 @@ class AuthorController extends Controller
         $author = Author::create([
             'name_author' => $request->input('name_author'),
         ]);
-
+        return redirect()->route('author.create')->with('success', 'Auteur ajouté avec succès!');
     }
 
     /**
