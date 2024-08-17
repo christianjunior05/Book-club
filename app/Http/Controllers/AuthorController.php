@@ -74,7 +74,7 @@ class AuthorController extends Controller
         ]);
 
         // Rediriger vers la page d'accueil avec un message de succès
-        return redirect()->route('home')->with('success', 'Auteur mis à jour avec succès!');
+        return redirect()->route('index')->with('success', 'Auteur mis à jour avec succès!');
     }
 
     /**
