@@ -17,3 +17,8 @@
 </a>
 
 
+<a href=" {{route('author.index')}}">
+
+    <h1 class="bg-red-500">Liste des auteurs </h1>
+</a>
+
