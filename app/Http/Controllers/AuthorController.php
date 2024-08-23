@@ -26,7 +26,7 @@ class AuthorController extends Controller
 
     public function store(Request $request)
     {
-
+ 
         $request->validate([
             'name_author' => 'required|string|max:255',
         ]);
