@@ -27,6 +27,15 @@ class AuthorController extends Controller
     public function store(Request $request)
     {
 
+        $request->validate([
+            'name_author' => 'required|string|max:255',
+        ]);
+
+        // Création de l'auteur
+        $author = Author::create([
+            'name_author' => $request->input('name_author'),
+        ]);
+        return redirect()->route('author.create')->with('success', 'Auteur ajouté avec succès!');
     }
 
     /**
